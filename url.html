@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>sjcet</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<center><h1>Uniform Resource Locators</h1></center>
+<pre><h3>→Used to identify documents on the internet
+General form:scheme:object-address
+- scheme → communications protocol, such as telnet , http, 
+mailto ,ftp
+- object address used to request and send HTML docs
+→ For the http protocol, the object-address is: fully qualified 
+domain name/doc path
+→ For the file protocol, only the doc path is needed
+
+→ Host name may include a port number(default port is 80)
+http:8080//www.xyz.org
+→ URLs cannot include spaces or any of a collection of other special characters (semicolons, colons, ...)
+→To include space ,Char must be coded as % sign , followed by two digit hexadecimal ASCII code of 
+char.
+Ex) San Jose→San%20Jose(20 hexacode for space)
+→The doc path may be abbreviated as a partial path, The rest is furnished by the server configuration
+→ If the doc path ends with a slash, it means it is a directory
+-UNIX Server →path is specified with forward slashes
+-Windows Server→ backward slashes..
+Complete path: www.abc.com/images/logo.jpg
+Relative path: www.abc.com points to index.html</pre></h3>
+</body>
+</html>

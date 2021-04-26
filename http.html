@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>sjcet</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<center><h1>HYPERTEXT TRANSFER PROTOCOL</h1></center>
+<pre><h3>
+- The application layer protocol used by all Web communications
+- HTTP consists of two phases: (current version 1.1)
+- the request and the response.
+- Each HTTP communication (request or response) between a browser and a Web server 
+consists of two parts: a header and a body. 
+- The header contains information about the communication;
+- the body contains the data of the communication if there is any
+- An HTTP session is a sequence of network request-response transactions. 
+- An HTTP client initiates a request by establishing a Transmission Control Protocol (TCP) 
+connection to a particular port on a server.
+- An HTTP server listening on that port waits for a client's request message. Upon receiving the 
+request, the server sends back a status line, such as "HTTP/1.1 200 OK", and a message of its own
+
+→ Request Phase
+- Form: 
+a)HTTP method domain part of URL HTTP ver.
+b)Header fields
+c )blank line
+d) Message body
+
+a) -An example of the first line of a request:
+GET /ktu.edu/degrees.html HTTP/1.1
+
+- Most commonly used methods:
+GET - Fetch a document and returns the content of specification
+POST - Execute the document, using the enclosed data in body
+HEAD - Fetch just the header of the document
+PUT – replace the specific doc/Store a new document on the server
+DELETE - Remove a document from the serve 
+
+b)Header fields-
+-Information about the communication
+-format of header field
+field-name followed by colon and value
+
+4 categories of header fields
+-General→for general information like date
+-Request→included in request headers
+-Response→for response headers
+-Entity→used in both request and response
+
+→One common request field is Accept
+Ex) Accept:text/plain
+Accept:image/gif
+Accept:text/html
+→Header provides additional information about the data that will be sent
+Ex)content-type:text/html
+→Host→hostname request field gives the name of the host
+→Client request
+GET /index.html HTTP/1.1
+Host: www.example.com
+A client request ( in this request line and only one header field) is followed by a blank line,used to 
+separate the header from the body
+
+Response Phase
+- Form:
+a)Status line
+b)Response header fields
+c)blank line
+d)Response body
+
+a) - Status line format:
+HTTP version status code explanation
+- Example: HTTP/1.1 200 OK
+(Current version is 1.1)
+- Status code is a three-digit number; first digit specifies the general status
+1 => Informational
+2 => Success
+3 => Redirection
+4 => Client error
+5 => Server error
+
+404→Not found
+500→Internal Server error
+200→OK
+b)After the status line server sends a response header , contain several lines of information 
+about the response. 
+Content-type:text/html
+c)Response header followed by blank line
+d)Response data follows the blank line
+
+RESPONSE FIELDS
+• ETag (entity tag) header field is used to determine if a cached version of the requested resource is
+identical to the current version of the resource on the server.
+• Content-Type specifies the Internet media type of the data conveyed by the HTTP message
+• Content-Length indicates its length in bytes.
+• Accept-Ranges: bytes: HTTP/1.1 webserver publishes its ability to respond to requests for certain byte 
+ranges of the document by setting the field Accept-Ranges: bytes.
+• Connection: close is sent, it means that the web server will close theTCP connection immediately 
+after the transfer of this response.
+• Most of the header lines are optional.
+• A Content-Encoding can be used to compress the transmitted data.</pre></h3>
+</body>
+</html>

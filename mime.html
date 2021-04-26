@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>sjcet</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<center><h1>Multipurpose Internet Mail Extension(MIME)</h1></center>
+<pre><h3>
+- Originally developed for email 
+- Browser needs a format of the document it receives from a web server.
+- MIME Specifies the format of different kinds of docs
+- Without knowing the form of the document ,browsers would not be able to render it . 
+- Used to specify to the browser the form of a file returned by the server 
+- Web server attaches MIME format specification to the beginning of the document ,to provide to 
+a browser.
+- When browser receives the document ,it uses MIME format specification to determine what to 
+do with the document.
+- If content is text→MIME code tells the browser that it is text
+- If content is sound→browser will choose a program to access the transmitted sound.
+
+→Type specifications
+- Form: type/subtype
+- Common MIME types 1) text 2) images 3) video
+
+-SubTypes
+text →plain ,html
+images→gif,jpeg
+video→mpeg,quicktime
+→Examples: text/plain, text/html, image/gif,image/jpeg
+→ Server gets type from the requested file name’s suffix (.html implies text/html)
+→ Browser gets the type explicitly from the server
+→ Experimental types
+- Subtype begins with x- e.g., video/x-msvideo
+→ Experimental types require the server to send a helper application or plug-in so the browser can 
+deal with the file
+
+→List of MIME spec is stored in configuration files of every Web Server.
+→Every browser has a set of MIME specification it can handle.
+Ex)unformatted text→text/plain
+HTML files→text/html
+→if browser does not have helper application/plug-in to render a doc,an error message is displayed
+→Style elements type attributes specifies the MIME type that describes the files content.
+Style uses → <style type=“text/css”>
+Javascript uses → <script type=“text/javascript”>
+Img uses → ”images/gif”</pre></h3>
+</body>
+</html>
